@@ -27,7 +27,7 @@ class Arm {
   In this example, it is more a way to init points
   */
   public void updatePoint() {
-    points[0] = start.copy(); // First point at the start, duh
+    points[0] = start.copy(); // First point at the start
     for (int i = 1; i < num; ++i) {
       /*
       dir is the vector representing the shaft at its angle
@@ -60,7 +60,6 @@ class Arm {
   
   /*
   Start from the goal and adjust point position to the start point
-  See video at line 2 for more explaination
   */
   void backward() {
     points[num - 1] = goal.copy(); // Set last point on goal
@@ -80,11 +79,10 @@ class Arm {
   }
   /*
   Start from the start and adjust point position to the goal point
-  See video at line 2 for more explaination
   */
   public void forward() {
     /*
-    Same thing as backward() but forward, duh
+    Same thing as backward() but forward
     */
     points[0] = start.copy();
     for (int i = 1; i < num; ++i) {
